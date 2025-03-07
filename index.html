@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница для тестирования юзабилити</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: 3px solid #e8491d;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: #cccccc;
+            font-weight: bold;
+        }
+
+        #newsletter {
+            padding: 15px;
+            color: #fff;
+            background: #35424a;
+        }
+
+        #newsletter h1 {
+            float: left;
+        }
+
+        #newsletter form {
+            float: right;
+            margin-top: 15px;
+        }
+
+        #newsletter input[type="email"] {
+            padding: 4px;
+            height: 25px;
+            width: 250px;
+        }
+
+        .button_1 {
+            height: 38px;
+            background: #e8491d;
+            border: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #fff;
+        }
+
+        #main {
+            padding: 20px;
+        }
+
+        #sidebar {
+            float: right;
+            width: 30%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        #sidebar input[type="text"] {
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        article#main-col {
+            float: left;
+            width: 65%;
+        }
+
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #e8491d;
+            text-align: center;
+        }
+
+        .box {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #fff;
+        }
+
+        .box h3 {
+            margin-bottom: 10px;
+        }
+
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li,
+            #newsletter h1,
+            #newsletter form,
+            #main-col,
+            #sidebar {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+
+            header {
+                padding-bottom: 20px;
+            }
+
+            #newsletter form {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Тестовый</span> Сайт</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="#">Ссылка 4</a></li>
+                    <li><a href="#">Ссылка 5</a></li>
+                    <li><a href="#">Ссылка 6</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Подпишитесь на нашу рассылку</h1>
+            <form>
+                <input type="email" placeholder="Введите email...">
+                <button type="submit" class="button_1">Подписаться</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1>Добро пожаловать</h1>
+                <p>
+                    Это большая секция текста, предназначенная для проверки читабельности и удобства просмотра.  Представьте, что здесь важная информация. Обратите внимание на шрифт, межстрочный интервал и ширину колонки.  Как легко читать этот текст? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies at, vulputate id lorem.  Nullam convallis erat id dui ullamcorper convallis.  Aliquam in tellus sit amet velit ultrices egestas.
+                </p>
+                <p>
+                    Еще один абзац.  Подумайте, достаточно ли пробелов между абзацами?  Трудно ли визуально разделить их?  Размер шрифта достаточен? Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+                </p>
+                <h2>Список</h2>
+                <ul>
+                    <li>Элемент списка 1</li>
+                    <li>Элемент списка 2</li>
+                    <li>Элемент списка 3</li>
+                    <li>Элемент списка 4</li>
+                    <li>Элемент списка 5</li>
+                </ul>
+                <h2>Таблица</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Заголовок 1</th>
+                            <th>Заголовок 2</th>
+                            <th>Заголовок 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Данные 1</td>
+                            <td>Данные 2</td>
+                            <td>Данные 3</td>
+                        </tr>
+                         <tr>
+                            <td>Данные 4</td>
+                            <td>Данные 5</td>
+                            <td>Данные 6</td>
+                        </tr>
+                         <tr>
+                            <td>Данные 7</td>
+                            <td>Данные 8</td>
+                            <td>Данные 9</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Форма обратной связи</h2>
+                <form>
+                    <label for="name">Имя:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="message">Сообщение:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="50"></textarea><br><br>
+
+                    <input type="submit" value="Отправить">
+                </form>
+            </article>
+
+            <aside id="sidebar">
+                <div class="box">
+                    <h3>Поиск</h3>
+                    <input type="text" placeholder="Введите поисковый запрос...">
+                    <button class="button_1">Поиск</button>
+                </div>
+                <div class="box">
+                    <h3>Категории</h3>
+                    <ul>
+                        <li><a href="#">Категория 1</a></li>
+                        <li><a href="#">Категория 2</a></li>
+                        <li><a href="#">Категория 3</a></li>
+                        <li><a href="#">Категория 4</a></li>
+                        <li><a href="#">Категория 5</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <p>Тестовый сайт, Copyright &copy; 2023</p>
+    </footer>
+
+</body>
+</html>
