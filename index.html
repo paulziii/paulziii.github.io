@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовая страница с ошибками доступности</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .low-contrast { color: #999; background: #eee; } /* Низкая контрастность */
+        .form-group { margin-bottom: 10px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Тест доступности</h1>
+
+    <!-- Ошибка 1: Изображение без alt-текста -->
+    <img src="https://via.placeholder.com/150" id="logo">
+
+    <!-- Ошибка 2: Низкая контрастность текста -->
+    <p class="low-contrast">Этот текст плохо читается из-за низкой контрастности.</p>
+
+    <!-- Ошибка 3: Некорректная структура заголовков (пропущен h2) -->
+    <h1>Заголовок 1</h1>
+    <h3>Заголовок 3 (должен быть h2)</h3>
+
+    <!-- Ошибка 4: Форма без лейблов -->
+    <form>
+        <div class="form-group">
+            <input type="text" name="username" placeholder="Имя пользователя">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Пароль">
+        </div>
+        <button type="submit">Войти</button>
+    </form>
+
+    <!-- Ошибка 5: Пустая ссылка -->
+    <a href="#"></a>
+
+    <!-- Ошибка 6: Элемент с role="button", но без обработчика -->
+    <div role="button" id="fake-button">Нажми меня (но ничего не произойдет)</div>
+
+    <!-- Ошибка 7: Скрытый контент, который должен быть доступен скринридерам -->
+    <div class="hidden" aria-hidden="true">Важная информация для всех пользователей</div>
+
+    <!-- Ошибка 8: Таблица без заголовков -->
+    <table>
+        <tr>
+            <td>Ячейка 1</td>
+            <td>Ячейка 2</td>
+        </tr>
+    </table>
+
+    <script>
+        // Ошибка 9: Фокус управляется только мышью (нет keyboard accessibility)
+        document.getElementById("fake-button").addEventListener("click", () => {
+            alert("Кнопка сработала, но только по клику!");
+        });
+    </script>
+</body>
+</html>
